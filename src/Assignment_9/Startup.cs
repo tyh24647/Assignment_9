@@ -16,6 +16,7 @@ namespace Assignment_9 {
         public void ConfigureServices(IServiceCollection services) {
             services.AddMvc();
             services.AddSingleton<GargoyleModel>();
+            
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env) {

@@ -12,8 +12,10 @@ namespace Assignment_9.Services {
         private string Id { get; set; }
 
         private GargoyleModel Gargoyle(string id) {
+            GargoyleModel outModel;
+
             if (Gargoyles.ContainsKey(id)) {
-                //return Gargoyles.;
+                //return Gargoyles.TryGetValue(id, out outModel);
             }
 
         }
