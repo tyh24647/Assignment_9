@@ -7,7 +7,7 @@ using Assignment_9.Services;
 using Assignment_9.Models;
 
 namespace Assignment_9.Controllers {
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     public class GargoylesController : Controller {
 
         private IGargoyleDatabase database;
@@ -22,8 +22,8 @@ namespace Assignment_9.Controllers {
         }
         
         [HttpGet("{id}")]
-        public string Get(string id) {
-            return database.Gargoyle(id).ToString();
+        public GargoyleModel Get(string id) {
+            return database.Gargoyle(id);
         }
 
         [HttpPost]

@@ -3,7 +3,7 @@
     "IIS Express": {
       "commandName": "IISExpress",
       "launchBrowser": true,
-      "launchUrl": "api/gargoyles",
+      "launchUrl": "gargoyles",
       "environmentVariables": {
         "ASPNET_ENV": "Development"
       }
