@@ -1,20 +1,21 @@
 ﻿var serverURL = "http://localhost:53330/api/values";
 
-function getValues() {
+function getVals() {
     $.ajax(serverURL, {
         method: "GET",
         success: handleServerEvent
     });
 }
 
-function patchValues() {
+function patchVals() {
     
 }
 
-function postValues() {
+function postVals() {
     //
 }
 
-function handleServerEvent() {
-    //TODO
+function handleServerEvent(data) {
+    var resultsDiv = document.getElementById("results");
+    resultsDiv.textContent = JSON.parse(data);
 }

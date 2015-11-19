@@ -5,19 +5,34 @@ using System.Threading.Tasks;
 using Assignment_9.Models;
 
 namespace Assignment_9.Services {
-    public class GargoyleDatabase {
+    public class GargoyleDatabase : IGargoyleDatabase {
 
-        private Dictionary<string, GargoyleModel> Gargoyles;
+        public Dictionary<string, GargoyleModel> All = new Dictionary<string, GargoyleModel>();
 
-        private string Id { get; set; }
+        public string Id { get; set; }
 
-        private GargoyleModel Gargoyle(string id) {
-            GargoyleModel outModel;
+        public GargoyleDatabase() {
+            //
+            //TODO figure out constructor
+            //
+            // needs "at least two values"
+            //
+        }
 
-            if (Gargoyles.ContainsKey(id)) {
-                //return Gargoyles.TryGetValue(id, out outModel);
+        public GargoyleModel Gargoyle(string id) {
+            GargoyleModel model = null;
+            if (All.TryGetValue(id, out model)) {
+                return model;
             }
+            return null;
+        }
 
+        public void Add(string id, GargoyleModel model) {
+            All.Add(id, model);
+        }
+
+        public Dictionary<string, GargoyleModel> GetAll() {
+            return All;
         }
 
     }

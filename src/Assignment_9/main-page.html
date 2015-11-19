@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <title>Gargoyles - Assignment 9 - Tyler Hostager</title>
-    <script src="Functions.js"></script>
+    <script src="Functions.js" type="text/javascript"></script>
     <link rel="stylesheet" type="text/css" href="GargoylesStyles.css" />
 </head>
 <body>
@@ -14,10 +14,12 @@
         <div id="site-content">
             <div id="text"></div>
             <div id="buttons">
-                <input type="button" value="GET" onclick="getValues()" />
-                <input type="button" value="PATCH" onclick="patchValues()" />
-                <input type="button" value="POST" onclick="postValues()" />
+                <input type="button" value="GET" onclick="getVals()" />
+                <input type="button" value="PATCH" onclick="patchVals()" />
+                <input type="button" value="FORCE PATCH" onclick="forcePatchVals()" />
+                <input type="button" value="POST" onclick="postVals()" />
             </div>
+            <div id="results"></div>
         </div>
         <div id="footer">
             <div id="footer-text"></div>

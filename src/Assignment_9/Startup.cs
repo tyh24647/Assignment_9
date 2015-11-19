@@ -7,15 +7,16 @@ using Microsoft.AspNet.Hosting;
 using Microsoft.AspNet.Http;
 using Microsoft.AspNet.Routing;
 using Microsoft.Framework.DependencyInjection;
-using Assignment_9.Models;
+using Assignment_9.Services;
 
 namespace Assignment_9 {
     public class Startup {
+
         public Startup(IHostingEnvironment env) { }
 
         public void ConfigureServices(IServiceCollection services) {
             services.AddMvc();
-            services.AddSingleton<GargoyleModel>();
+            services.AddTransient<IGargoyleDatabase, GargoyleDatabase>();
             
         }
 
