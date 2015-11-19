@@ -18,26 +18,37 @@ namespace Assignment_9.Controllers {
         
         [HttpGet]
         public IEnumerable<GargoyleModel> Get() {
-            return database.All.Values;
+            //return database.All.Values;
+            return database.GetAll().Values;
         }
         
         [HttpGet("{id}")]
         public GargoyleModel Get(string id) {
             return database.Gargoyle(id);
         }
-
+        
         [HttpPost]
         public void Post([FromBody] string value) {
             GargoyleModel model = null;
-            database.All.Add(value, model);
+            
+            // TODO look at code for "add" from lecture
+             
+            //database.GetAll().Add(value, );
+            //database.All.Add(value, model);
+        }
+        
+
+        [HttpPatch]
+        public void Patch(string id, [FromBody]string value) {
+            // TODO look at code for "set" from lecture
         }
 
         [HttpPut("{id}")]
         public void Put(string id, [FromBody]string value) {
             GargoyleModel model = null;
 
-            if (!database.All.ContainsKey(id)) {
-                database.All.Add(id, model);
+            if (!database.GetAll().ContainsKey(id)) {
+                database.GetAll().Add(id, model);
             }
         }
 
@@ -45,8 +56,8 @@ namespace Assignment_9.Controllers {
         public void Delete(string id) {
             GargoyleModel model = null;
 
-            if (database.All.TryGetValue(id, out model)) {
-                database.All.Remove(id);
+            if (database.GetAll().TryGetValue(id, out model)) {
+                database.GetAll().Remove(id);
             }
         }
     }

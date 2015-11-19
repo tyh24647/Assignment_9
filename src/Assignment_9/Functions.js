@@ -10,13 +10,24 @@ function getVals() {
 function patchVals() {
     $.ajax(serverURL, {
         method: "PATCH",
-
-        // TODO figure out what to put in here
+        header: {
+            "if-match": // TODO figure out what to put here
+        },
+        data: {
+            Name: document.getElementById("name").value,
+            Color: document.getElementById("color").value,
+            Size: document.getElementById("size").value,
+            Gender: document.getElementById("gender").value
+        },
+        success: handleServerEvent
     });
 }
 
 function postVals() {
-    //
+    $.ajax(serverURL, {
+        method: "POST",
+        data: ""
+    });
 }
 
 function handleServerEvent(data) {

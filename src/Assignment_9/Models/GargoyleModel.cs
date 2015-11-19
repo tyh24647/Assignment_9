@@ -29,7 +29,7 @@ namespace Assignment_9.Models {
         }
         
         public void Update() {
-            this.Updated = DateTime.UtcNow;
+            Updated = DateTime.UtcNow;
         }
     }
 }

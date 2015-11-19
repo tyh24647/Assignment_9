@@ -11,14 +11,6 @@ namespace Assignment_9.Services {
 
         public string Id { get; set; }
 
-        public GargoyleDatabase() {
-            //
-            // TODO figure out constructor
-            //
-            // needs "at least two values"
-            //
-        }
-
         public GargoyleModel Gargoyle(string id) {
             GargoyleModel model = null;
             if (All.TryGetValue(id, out model)) {
