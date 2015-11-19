@@ -13,7 +13,7 @@ namespace Assignment_9.Services {
 
         public GargoyleDatabase() {
             //
-            //TODO figure out constructor
+            // TODO figure out constructor
             //
             // needs "at least two values"
             //

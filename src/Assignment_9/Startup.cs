@@ -21,6 +21,13 @@ namespace Assignment_9 {
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env) {
+            app.UseCors(policy => policy
+                .AllowAnyHeader()
+                .AllowAnyMethod()
+                .WithExposedHeaders()
+                .WithOrigins("*")
+            );
+
             app.UseStaticFiles();
             app.UseMvc();
         }

@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <title>Gargoyles - Assignment 9 - Tyler Hostager</title>
     <script src="Functions.js" type="text/javascript"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="GargoylesStyles.css" />
 </head>
 <body>
@@ -12,7 +13,9 @@
             <div id="title"></div>
         </div>
         <div id="site-content">
-            <div id="text"></div>
+            <div id="text">
+                <p id="text-content"></p>
+            </div>
             <div id="buttons">
                 <input type="button" value="GET" onclick="getVals()" />
                 <input type="button" value="PATCH" onclick="patchVals()" />
